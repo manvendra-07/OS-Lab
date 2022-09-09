@@ -1,0 +1,9 @@
+sort -k 3 BMI.dat
+sort -k 4 BMI.dat
+sort -k 10 BMI.dat
+sort -k 4,4 -k 3,3 BMI.dat
+cut -d ',' -f1,2,5 BMI.dat
+cut -d ',' -f2 BMI.dat|tr a-z A-Z
+sort -k 6 BMI.dat>Personnel_BMI_2022.dat
+cut -d ',' -f2-5 BMI.dat|sort -t$"," -k1>Names_Sorted.dat
+cut -d ',' -f2 BMI.dat|grep [S,J]>SJ_Names.dat
